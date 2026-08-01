@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DolphinMod — Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --ocean-dark: #00111f;
+      --ocean-mid: #00334d;
+      --ocean-light: #00b7ff;
+      --ocean-glow: #4df3ff;
+      --white-soft: #eefaff;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: linear-gradient(180deg, var(--ocean-dark), var(--ocean-mid));
+      color: var(--white-soft);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 30, 50, 0.6);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(77, 243, 255, 0.25);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .logo-icon {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      margin-left: 1.2rem;
+      color: var(--ocean-glow);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--ocean-light);
+      text-shadow: 0 0 12px rgba(0, 183, 255, 0.6);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #c7e9ff;
+      line-height: 1.6;
+    }
+
+    .button {
+      margin-top: 2rem;
+      padding: 0.9rem 1.8rem;
+      background: var(--ocean-light);
+      color: var(--ocean-dark);
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow
