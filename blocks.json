@@ -1,0 +1,58 @@
+[
+  { "name": "walk 10 steps", "type": "dm-motion" },
+  { "name": "make splash effect", "type": "dm-ocean" }
+]
+[
+  { "name": "go back 10 steps", "type": "dm-motion" },
+  { "name": "make ghost effect", "type": "dm-ocean" }
+]
+[
+  { "name": "glub (hello)", "type": "dm-motion" },
+  { "name": "if: _____ then: ______", "type": "dm-ocean" }
+]
+// Make blocks draggable
+const blocks = document.querySelectorAll('.block');
+
+blocks.forEach(block => {
+  block.addEventListener('mousedown', startDrag);
+});
+
+let activeBlock = null;
+let offsetX = 0;
+let offsetY = 0;
+
+function startDrag(e) {
+  activeBlock = e.target;
+
+  // Convert block to absolute positioning
+  activeBlock.style.position = 'absolute';
+  activeBlock.style.zIndex = 9999;
+
+  offsetX = e.clientX - activeBlock.getBoundingClientRect().left;
+  offsetY = e.clientY - activeBlock.getBoundingClientRect().top;
+
+  document.addEventListener('mousemove', dragBlock);
+  document.addEventListener('mouseup', stopDrag);
+}
+
+function dragBlock(e) {
+  if (!activeBlock) return;
+
+  activeBlock.style.left = (e.clientX - offsetX) + 'px';
+  activeBlock.style.top = (e.clientY - offsetY) + 'px';
+}
+
+function stopDrag() {
+  if (!activeBlock) return;
+
+  // Simple “snap” effect (fake, but looks cool)
+  activeBlock.style.transform = 'scale(1.03)';
+  setTimeout(() => {
+    activeBlock.style.transform = 'scale(1)';
+  }, 120);
+
+  document.removeEventListener('mousemove', dragBlock);
+  document.removeEventListener('mouseup', stopDrag);
+
+  activeBlock = null;
+}
