@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DolphinMod Editor — Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #00111f;
+      color: white;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background: #00263d;
+      border-right: 2px solid #00b7ff;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      color: #4df3ff;
+      text-transform: uppercase;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* Block styles — ORIGINAL DESIGNS */
+    .block {
+      padding: 10px 14px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      cursor: grab;
+      user-select: none;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    }
+
+    /* DolphinMod blocks */
+    .dm-motion {
+      background: #00b7ff;
+      color: #00334d;
+    }
+
+    .dm-ocean {
+      background: #4df3ff;
+      color: #00263d;
+    }
+
+    /* Scratch‑style inspired (but NOT copied) */
+    .sc-motion {
+      background: #4c97ff;
+      color: #002b5c;
+      border-left: 6px solid #2e6dd8;
+    }
+
+    .sc-looks {
+      background: #9966ff;
+      color: #2d005c;
+      border-left: 6px solid #7a4cd8;
+    }
+
+    /* PenguinMod‑style inspired (but NOT copied) */
+    .pm-custom {
+      background: #00c896;
+      color: #003326;
+      border-left: 6px solid #009f75;
+    }
+
+    .pm-advanced {
+      background: #ffb84c;
+      color: #4d2e00;
+      border-left: 6px solid #d88f2e;
+    }
+
+    /* Stage area */
+    .stage {
+      flex: 1;
+      background: #001a2e;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stage-header {
+      padding: 1rem;
+      background: #00334d;
+      border-bottom: 2px solid #00b7ff;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+    }
+
+    .stage-area {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4df3ff;
+      font-size: 1.4rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar with blocks -->
+  <div class="sidebar">
+    <h2>DolphinMod Blocks</h2>
+    <div class="block dm-motion">swim 10 steps</div>
+    <div class="block dm-ocean">make splash effect</div>
+
+    <h2>Scratch‑Style Blocks</h2>
+    <div class="block sc-motion">move 10 steps</div>
+    <div class="block sc-looks">change color by 25</div>
+
+    <h2>PenguinMod‑Style Blocks</h2>
+    <div class="block pm-custom">custom block: wave()</div>
+    <div class="block pm-advanced">advanced: turbo swim</div>
+  </div>
+
+  <!-- Stage -->
+  <div class="stage">
+    <div class="stage-header">DolphinMod Editor</div>
+    <div class="stage-area">
+      Stage (Real editor. This is just a original repo.)
+    </div>
+  </div>
+
+</body>
+</html>
