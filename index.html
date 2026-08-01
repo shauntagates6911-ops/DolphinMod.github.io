@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DolphinMod</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Basic DolphinMod styling -->
+  <style>
+    :root {
+      --dolphin-blue: #00b7ff;
+      --deep-ocean: #021526;
+      --aqua-accent: #4df3ff;
+      --soft-white: #f5f9ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #053b5e 0%, #021526 60%, #000814 100%);
+      color: var(--soft-white);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wrapper {
+      max-width: 900px;
+      width: 100%;
+      padding: 2.5rem;
+      border-radius: 18px;
+      background: rgba(2, 21, 38, 0.85);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(77, 243, 255, 0.25);
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--aqua-accent), var(--dolphin-blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+    }
+
+    .logo-text {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: #c7e9ff;
+      margin-bottom: 1.75rem;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--aqua-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .card {
+      margin-bottom: 1.5rem;
+      padding: 1.1rem 1.2rem;
+      border-radius: 12px;
+      background: rgba(3, 32, 55, 0.9);
+      border: 1px solid rgba(0, 183, 255, 0.35);
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+      font-size: 0.98rem;
+    }
+
+    .pill {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(77, 243, 255, 0.6);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--aqua-accent);
+    }
+
+    .footer {
+      margin-top: 1.75rem;
+      font-size: 0.8rem;
+      color: #9bbbd4;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    a {
+      color: var(--aqua-accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrapper">
+    <header class="logo">
+      <div class="logo-icon">🐬</div>
+      <div class="logo-text">DolphinMod</div>
+    </header>
+
+    <h1>Ocean‑Powered Scratch Experience</h1>
+    <p class="tagline">
+      DolphinMod is an experimental, ocean‑themed interface concept inspired by Scratch‑style modding.
+      This repo does <strong>not</strong> include Scratch source code.
+    </p>
+
+    <section class="card">
+      <div class="section-title">Concept Features</div>
+      <ul>
+        <li>• Aqua‑themed UI with glowing ocean gradients</li>
+        <li>• Dolphin‑style branding instead of the classic cat mascot</li>
+        <li>• Hypothetical block palette tuned to motion, waves, and flow</li>
+        <li>• Designed to resemble a mod front page without being a direct fork</li>
+      </ul>
+      <span class="pill">Concept build</span>
+    </section>
+
+    <section class="card">
+      <div class="section-title">Legal & Credits</div>
+      <ul>
+        <li>• This project is a <strong>separate concept repo</strong>, not a fork of Scratch or PenguinMod.</li>
+        <li>• No Scratch source code or assets are included in this repository.</li>
+        <li>• Scratch is a project of the Scratch Foundation. Visit <a href="https://scratch.mit.edu" target="_blank" rel="noopener noreferrer">scratch.mit.edu</a>.</li>
+        <li>• If you ever base a future version of DolphinMod on GPLv3 code, that version must follow GPLv3.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="section-title">Get Started</div>
+      <ul>
+        <li>• Hi! dolphinmod is a free scratch mod</li>
+        <li>• Try coding today! DolphinMod.github/editor.html.</li>
+        <li>• Customize colors, fonts, and layout to match your final vision.</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> DolphinMod — concept UI by Shaunte.</span>
+      <span>License: MIT (for this standalone web UI).</span>
+    </footer>
+  </main>
+
+  <script>
+    // Simple year auto‑update
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
